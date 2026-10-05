@@ -1,26 +1,33 @@
-# info.yaml
-# GDS 2.5D view konfiguráció - Piros 'X' alakzat példa
+# GDS 2.5D Megjelenítési Konfiguráció
+version: "1.0"
 
-meta:
-  version: "1.0"
-  description: "Piros X alakzat GDS rétegkiosztás és 2.5D vizualizációs beállítás"
+# Ügyelj rá, hogy a GDS fájl pontosan ezen a néven fusson az info.yaml mellett!
+design:
+  gds_file: "design.gds"
+  cell_name: "TOP"       # Cseréld ki a saját fő cellád nevére, ha nem TOP
 
+# A 2.5D view réteg- és magassági beállításai (Piros X elkerülésére)
 layers:
-  - layer_number: 10
+  - layer: 1
     datatype: 0
-    name: "X_SHAPE"
-    color: "#FF0000"          # Piros szín kódja
-    alpha: 0.8                # Átlátszóság (0.0 - 1.0)
-    thickness: 1.5            # 2.5D magasság / vastagság mikronban (um)
-    z_start: 0.0              # Alap magassági szint (Z-tengely)
+    name: "Red_Layer_1"
+    color: "#FF0000"     # Piros szín
+    z_start: 0.0         # Alapmagasság (mikronban)
+    thickness: 0.5       # Vastagság a 2.5D nézethez
 
-view_settings:
-  dimension: "2.5D"
-  background_color: "#FFFFFF"
-  camera:
-    fov: 45
-    default_angle: [30, 45, 0]
+  - layer: 2
+    datatype: 0
+    name: "Red_Layer_2"
+    color: "#FF0000"     # Szintén piros
+    z_start: 0.5
+    thickness: 1.0
 
+  - layer: 3
+    datatype: 0
+    name: "Red_Layer_3"
+    color: "#FF0000"
+    z_start: 1.5
+    thickness: 0.8
 
 # Do not change!
 yaml_version: 6
