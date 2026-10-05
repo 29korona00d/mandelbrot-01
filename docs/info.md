@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+this code counts and visualizes the mandelbrot fractal
 
 ## How to test
 
-Explain how to use your project
+plug the vga into the one on the board
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+youll need a vga connector 
